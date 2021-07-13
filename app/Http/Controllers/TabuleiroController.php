@@ -115,11 +115,11 @@ class TabuleiroController extends Controller
         $naviosPC = $tabuleiro->navios;
         foreach ($naviosPC as $navio){
             $achou = True;
-            $preencheu= True;
+            $preencher= True;
             $linhas = [1,2,3,4,5,6,7,8,9,10];
             $colunas = [1,2,3,4,5,6,7,8,9,10];
             if(self::escolherDirecao() == 0) {
-                while ($preencheu) {
+                while ($preencher) {
                     $posicaoLinha = array_rand($linhas,1);
                     while(count($colunas) != 0 && $achou) {
                         $posicaoColuna = array_rand($colunas,1);
@@ -138,7 +138,7 @@ class TabuleiroController extends Controller
                 }
 
             }else {
-                while($preencheu){
+                while($preencher){
                     $posicaoColuna = array_rand($colunas,1);
                     while(count($linhas) != 0 && $achou) {
                         $posicaoLinha = array_rand($linhas,1);
